@@ -1,0 +1,25 @@
+{
+  "name": "msgpack_demo",
+  "version": "1.0.0",
+  "description": "A msgpack demo",
+  "author": "584069777@qq.com",
+  "private": true,
+  "scripts": {
+    "start": "node index"
+  },
+  "dependencies": {
+    "inflation": "^2.0.0",
+    "koa": "^2.13.0",
+    "koa-static": "^5.0.0",
+    "msgpackr": "^1.4.7",
+    "raw-body": "^2.4.1"
+  },
+  "engines": {
+    "node": ">= 8.0.0",
+    "npm": ">= 5.0.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.24.1",
+    "bytenode": "^1.1.7"
+  }
+}

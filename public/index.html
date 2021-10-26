@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>msgpack demo</title>
+</head>
+<body>
+  <button id="send">sendAjax</button>
+  <script type="module">
+    import doAjax from './demo.mjs'
+    document.getElementById('send').onclick = function () {
+      doAjax('/api/demo', {
+        a: 1,
+        b: '2',
+        c: [3, '4'],
+        d: true
+      }).then(async res => {
+        const result = await res.json()
+        console.log(result)
+      }).catch((e) => {
+        console.error(e.message)
+      })
+    }
+  </script>
+</body>
+</html>
